@@ -1,0 +1,4 @@
+contrib/ldap/clacks-core.* etc/ldap/schema/clacks
+contrib/ldap/configured-device* etc/ldap/schema/clacks
+contrib/ldap/registered-device* etc/ldap/schema/clacks
+contrib/ldap/installed-device* etc/ldap/schema/clacks

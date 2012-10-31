@@ -82,3 +82,12 @@ Description: clacks infrastructure service - documentation
  Brief description is missing.
  .
  This package provides the documentation.
+
+Package: clacks-schema
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: slapd
+Description: clacks LDAP schema
+ Brief description is missing.
+ .
+ This package provides LDAP schema for clacks client support.
