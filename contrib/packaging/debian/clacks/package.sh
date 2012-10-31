@@ -25,7 +25,7 @@ ROOT=`git rev-parse --show-toplevel`
 mkdir "$DIR"
 
 # Export the current git tree to the temporary directory
-cd "$ROOT" && git archive master | tar -x -C "$HERE/$DIR"
+cd "$ROOT" && git archive HEAD | tar -x -C "$HERE/$DIR"
 
 # Create the orig.tar
 cd "$HERE"
