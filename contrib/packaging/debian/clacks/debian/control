@@ -4,8 +4,10 @@ Priority: optional
 Maintainer: Cajus Pollmeier <cajus@debian.org>
 Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3~), python-setuptools,
  python-pybabel, python-nose, python-kid, python-coverage,
- python-logilab-astng, python-logilab-common,
- python-logilab-constraint, pylint, python-dateutil
+ python-logilab-astng, python-logilab-common, python-sphinx,
+ python-logilab-constraint, pylint, python-dateutil,
+ python-sphinxcontrib.spelling, python-zope.interface,
+ python-lxml, python-imaging
 X-Python-Version: >= 2.6
 Standards-Version: 3.9.2
 Homepage: http://gosa-project.org
@@ -14,10 +16,11 @@ Vcs-Git: git://github.com/clacks/clacks.git
 
 Package: clacks-common
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, python-pkg-resources, python-avahi,
- python-openssl, python-dbus, python-gtk2, python-lxml, python-libxml2,
+Depends: ${python:Depends}, ${misc:Depends},
+ python-pkg-resources, python-avahi,
+ python-openssl, python-dbus, python-gtk2, python-libxml2,
  python-dmidecode, python-qpid, python-cjson, python-pybabel,
- python-zope.interface, avahi-daemon
+ avahi-daemon
 Description: clacks infrastructure service - common files
  Brief description is missing.
  .
@@ -72,10 +75,10 @@ Description: clacks infrastructure service - agent
  .
  This package provides the agent.
 
-#Package: clacks-doc
-#Architecture: all
-#Depends: ${misc:Depends}
-#Description: clacks infrastructure service - documentation
-# Brief description is missing.
-# .
-# This package provides the documentation.
+Package: clacks-doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: clacks infrastructure service - documentation
+ Brief description is missing.
+ .
+ This package provides the documentation.

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+import shutil
 
 modules = ['common',
     'agent',
@@ -15,3 +16,10 @@ for module in modules:
 for root, dirs, files in os.walk("plugins"):
     if "setup.py" in files:
         os.system("cd %s && ./setup.py %s" % (root, " ".join(sys.argv[1:])))
+
+if 'clean' in sys.argv:
+    docpath = os.path.abspath("./doc/html")
+    if os.path.isdir(docpath):
+        shutil.rmtree(docpath)
+else:
+    os.system("make -C doc html")

@@ -12,6 +12,7 @@
 override_dh_auto_clean:
 	dh_auto_clean
 	find -name '*egg-info' | xargs rm -rf
+	-rm -r $(CURDIR)/doc/html
 
 %:
 	dh  $@ --with python2
