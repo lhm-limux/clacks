@@ -1,5 +1,5 @@
 Source: clacks
-Section: misc
+Section: lhm/misc
 Priority: optional
 Maintainer: Cajus Pollmeier <cajus@debian.org>
 Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3~), python-setuptools,

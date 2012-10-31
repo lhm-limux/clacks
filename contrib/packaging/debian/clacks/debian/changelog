@@ -1,3 +1,10 @@
+clacks (0.8-1~lhm1) wheezy; urgency=low
+
+  * Moved into lhm component.
+  * Fix some packaging issues.
+
+ -- Jan-Marek Glogowski <jan-marek.glogowski@muenchen.de>  Fri, 26 Oct 2012 16:35:47 +0200
+
 clacks (0.8-1) unstable; urgency=low
 
   * Initial release.
