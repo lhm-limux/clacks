@@ -5,3 +5,8 @@ nosetests.xml
 *.swp
 .coverage
 reports
+*.deb
+*.tar.*
+*.changes
+*.dsc
+*.build
