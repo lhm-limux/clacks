@@ -120,7 +120,7 @@ class LDAP(ObjectBackend):
                 if dn in self.__i_cache and attr in self.__i_cache[dn]:
                     self.__i_cache_ttl[dn] = time.time()
                     #noinspection PyUnboundLocalVariable
-                    return len(set(ocs) - set(self.__i_cache[dn]['objectClass'])) == 0 and len({value} - set(self.__i_cache[dn][attr])) == 0
+                    return len(set(ocs) - set(self.__i_cache[dn]['objectClass'])) == 0 and len(set({value}) - set(self.__i_cache[dn][attr])) == 0
 
             else:
                 self.__i_cache_ttl[dn] = time.time()
@@ -147,7 +147,7 @@ class LDAP(ObjectBackend):
                     self.__i_cache[dn][attr] = []
 
                 #noinspection PyUnboundLocalVariable
-                return len(set(ocs) - set(self.__i_cache[dn]['objectClass'])) == 0 and len({value} - set(self.__i_cache[dn][attr])) == 0
+                return len(set(ocs) - set(self.__i_cache[dn]['objectClass'])) == 0 and len(set({value}) - set(self.__i_cache[dn][attr])) == 0
             else:
                 return len(set(ocs) - set(self.__i_cache[dn]['objectClass'])) == 0
 
